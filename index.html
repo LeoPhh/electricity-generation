@@ -7,9 +7,62 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Quirky ways to generate electricity</h1>
-    <p>We all know the usual methods of generating electricity - there's solar, wind, nuclear, geothermal, hydro, and fossil fuels.</p>
-    <p class="however">However,</p>
-    <p>what if I told you there's more, interesting ways to generate electricity?</p>
+    <div class="starter">
+        <h1>Quirky ways to generate electricity</h1>
+        <p class="initial-p">We all know the usual methods of generating electricity - there's solar, wind, nuclear, etc..</p>
+        <p class="however">However,</p>
+        <p class="initial-p">what if I told you there's more, interesting ways to generate electricity?</p>
+    </div>
+
+    <div class="method">
+        <div class="method-text">
+            <h2>Jellyfish</h2>
+            <p>Glow-in-the-dark jellyfish contain the necessary ingredients for developing a new type of battery. A green fluorescent protein, known as GFP, is known to be responsible for producing the glow, and can be used to make a biological fuel cell.</p>
+        </div>
+        <img src="jellyfish.jpg">
+    </div>
+
+    <div class="method">
+        <div class="method-text">
+            <h2>Manure</h2>
+            <p>Cows are notorious for their CO2-emitting flatulence, but the truth is that cow manure can be used to produce electricity through a process known as biogas recovery. To do this, the manure must be deposited in a tank that has been previously heated designed to convert the waste into gas. The gas can then be used to power a generator, producing cleaner energy in the process.</p>
+        </div>
+        <img src="cows.png">
+    </div>
+
+    <div class="method">
+        <div class="method-text">
+            <h2>Squeezing onions</h2>
+            <p>Besides making us cry, if onions are squeezed, we can convert their juice into methane, which can be used to generate electricity. And this is something that is being put into practice. Specifically by an onion wholesaler in California, which is saving more than half a million dollars on its energy bills by using this technique.</p>
+        </div>
+        <img src="onions.png">
+    </div>
+
+    <a href="https://www.cepsa.com/en/planet-energy/sustainable-innovation/ways-to-generate-energy" class="button" target="_blank">Click here for my source</a>
+
+
+    
+    <div class="button-sike" id="buttonSike" target="_blank">Click here for another source</div>
+
+    <script>
+        // JavaScript to toggle button position and text
+        document.getElementById('buttonSike').addEventListener('click', function(event) {
+            // Prevent default link behavior
+            event.preventDefault();
+
+            // Toggle classes for movement and text change
+            this.classList.toggle('right');
+            this.classList.toggle('clicked');
+
+            // Change the button text based on its state
+            if (this.classList.contains('clicked')) {
+                this.textContent = 'sike, can\'t catch me';
+            } else {
+                this.textContent = 'too slow';
+            }
+        });
+    </script>
+
+    
 </body>
 </html>

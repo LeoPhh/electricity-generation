@@ -1,14 +1,142 @@
-h1 {
-    text-align: center;
+body, ul {
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background: url('back.png');
+    background-size: cover;
 }
 
-p {
+.starter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 45px;
+}
+
+.initial-p {
+    font-size: 17px;
+    background-color: white;
+    margin-left: 600px;
+    width: 35vw;
+    padding: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
     text-align: center;
 }
 
 .however {
-    font-size: 5rem;
+    text-align: center;
+    font-size: 3rem;
     font-weight: bold;
+    color: white;
     font-family: 'Courier New', Courier, monospace;
-    background-color: blue;
+}
+
+.however:hover {
+    transform: scale(3);
+    transition: transform 0.3s ease;
+}
+
+.method {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 50px;
+    background-color: rgb(173, 210, 161);
+    border-radius: 20px;
+    border: 5px solid rgb(15, 84, 42);
+
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in forwards;
+    animation-delay: 0.4s;
+}
+
+.method:last-of-type {
+    margin-bottom: 50px;
+}
+
+.method-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    padding-right: 100px;
+}
+
+.method-text h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 3rem;
+    margin-bottom: 2px;
+    margin-top: 20px;
+}
+
+.method img {
+    max-width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    margin-right: 100px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 26px;
+    color: white;
+    background-color: #3498db;
+    text-align: center;
+    text-decoration: none; /* Remove underline from links */
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-left: 800px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.button:hover {
+    background-color: #2980b9; /* Darker shade on hover */
+}
+
+.button-sike {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 26px;
+    color: white;
+    background-color: #1d8639;
+    text-align: center;
+    text-decoration: none; /* Remove underline from links */
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-left: 775px;
+    margin-bottom: 50px;
+}
+
+.button-sike:hover {
+    background-color: #1a9564; /* Darker shade on hover */
+}
+
+.button-sike.right {
+    margin-left:1500px;
+}
+
+/* Change button text */
+.button-sike.clicked {
+    background-color: #e74c3c; /* Change background color when clicked */
 }
